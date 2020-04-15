@@ -1,0 +1,24 @@
+{
+    "name": "vscode-language-recon-prototype",
+    "displayName": "vscode-language-recon-prototype",
+    "description": "A test package for recon syntax",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "reconn",
+            "aliases": ["Reconn", "reconn"],
+            "extensions": [".rcn"]
+        }],
+        "grammars": [{
+            "language": "reconn",
+            "scopeName": "source.reconn",
+            "path": "./syntaxes/reconn.tmLanguage.json"
+        }]
+    }
+}

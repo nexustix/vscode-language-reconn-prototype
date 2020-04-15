@@ -1,0 +1,54 @@
+{
+	"scopeName": "source.reconn",
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Reconn",
+	"patterns": [
+		{
+			"comment": "",
+			"name": "keyword.control.reconn",
+			"match": "\\b(def)\\b"
+		},
+		{
+			"comment": "",
+			"name": "keyword.control.reconn",
+			"match": "\\b(end)\\b"
+		},
+		{
+			"comment": "",
+			"name": "string.quoted.double.reconn",
+			"match": "\".*?\""
+		},
+		{
+			"comment": "",
+			"name": "constant.numeric.reconn",
+			"match": "[+-]?\\d+"
+		},
+		{
+			"comment": "",
+			"name": "string.unquoted.reconn",
+			"match": ":\\S+"
+		},
+		{
+			"comment": "",
+			"name": "constant.other.reconn",
+			"match": "#\\S+"
+		},
+		{ "include": "#blockComment" }
+	],
+	"repository": {
+		"blockComment": {
+			"name": "meta.section.example",
+			"contentName": "comment.line.reconn",
+			"begin": "\\(($| )",
+			"end": "(^| )\\)",
+			"beginCaptures": {
+			  "0": {"name": "comment.line.reconn"}
+			},
+			"endCaptures": {
+			  "0": {"name": "comment.line.reconn"}
+			},
+			"patterns": [{ "include": "#blockComment" }]
+		}
+	}
+	
+}
